@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&display=swap');
 
 body {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Chewy', cursive;
   background: linear-gradient(270deg, #ffe0f0, #fffbd6, #e0f7fa);
   background-size: 600% 600%;
   animation: gradientMove 10s ease infinite;
@@ -15,119 +15,75 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-.container {
+.scene {
   max-width: 600px;
   margin: auto;
-  background-color: #fffdf5;
-  border-radius: 20px;
+  background-color: #fffafc;
+  border-radius: 25px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   animation: floaty 4s ease-in-out infinite;
 }
 
 @keyframes floaty {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
 
-.title {
-  font-size: 2.8rem;
-  color: #d96fa1;
-  margin-bottom: 10px;
-  animation: popIn 1s ease;
+.main-title {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 3.5rem;
+  color: #ff4081;
+  margin-bottom: 30px;
 }
 
-.subtitle, .mood-text {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 25px;
-  animation: popMood 1s ease-in-out, pulseMood 2s infinite;
-}
-
-@keyframes popIn {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes popMood {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes pulseMood {
-  0%, 100% { transform: scale(1); color: #ff6fa1; }
-  50% { transform: scale(1.05); color: #d96fa1; }
-}
-
-select, button {
+select {
+  font-size: 24px;
   padding: 12px 20px;
-  font-size: 18px;
   border-radius: 12px;
-  margin: 10px;
-  border: 2px solid #d96fa1;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-button {
-  background-color: #ffd6e8;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  background-color: #ffafd0;
-  transform: scale(1.05);
-}
-
-button::after {
-  content: "🐾";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.back-link {
-  color: #d96fa1;
-  text-decoration: none;
-  font-size: 18px;
-  display: inline-block;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ff66a3;
+  background-color: #fff0f8;
+  color: #d63384;
   transition: transform 0.3s ease;
 }
 
-.back-link:hover {
-  transform: scale(1.1) rotate(-3deg);
-  color: #ff6fa1;
+button {
+  font-size: 22px;
+  font-family: 'Chewy', cursive;
+  background-color: #ffb6d9;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 30px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.cat-animation {
-  font-size: 40px;
-  animation: pawBounce 1s infinite alternate;
+button:hover {
+  background-color: #ff90c2;
+  transform: scale(1.1);
+}
+
+.ui-buttons {
   margin-top: 20px;
 }
 
-@keyframes pawBounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+.moving-cat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 50px;
+  animation: catWalk 10s linear infinite;
 }
 
-.floating-cats {
-  font-size: 2rem;
-  animation: floatCats 8s linear infinite;
-  margin-top: 20px;
-  opacity: 0.8;
+@keyframes catWalk {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(110vw); }
 }
 
-@keyframes floatCats {
-  0% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(-15px); opacity: 0.6; }
-  100% { transform: translateY(0); opacity: 1; }
+body.night {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
 }

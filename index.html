@@ -2,19 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CATMOSPHERE</title>
+  <title>Meowatmosphere</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">CATMOSPHERE 🐱</h1>
-    <p class="subtitle">Choose your meow to know the cat's mood!</p>
-    
+  <div class="scene">
+    <h1 class="main-title">Meowatmosphere 🐾</h1>
+
     <select id="userInput">
-      <option value="Meow">Meow</option>
+      <option value="">Choose a meow...</option>
+      <option>Meow</option>
+      <option>Meowwww</option>
+      <option>Meewww</option>
+      <option>Meooooooow</option>
+      <option>Meowmeow</option>
     </select>
 
-    <button onclick="submitMeow()">Send</button>
+    <button onclick="submitMeow()">Meow Again!</button>
+
+    <div class="ui-buttons">
+      <button class="toggle-btn" onclick="toggleNightMode()">🌙 Night</button>
+      <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+    </div>
+
+    <audio id="bgMusic" src="cute-music.mp3" loop></audio>
   </div>
 
   <script src="script.js"></script>
