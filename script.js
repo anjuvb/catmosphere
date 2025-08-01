@@ -1,29 +1,10 @@
-function submitMeow() {
-  const input = document.getElementById("userInput").value.trim().toLowerCase();
-
-  if (input !== "meow") {
-    alert("Only 'meow' is allowed 😼");
-    return;
-  }
+==function submitMeow() {
+  const input = document.getElementById("userInput").value.trim();
+  if (input !== "Meow") return;
 
   const totalMoods = 52;
   const moodIndex = Math.floor(Math.random() * totalMoods);
   window.location.href = `mood.html?mood=${moodIndex}`;
-}
-
-// 🔄 Toggle Night Mode
-function toggleNightMode() {
-  document.body.classList.toggle("night");
-}
-
-// 🔊 Toggle Background Music
-function toggleMusic() {
-  const music = document.getElementById("bgMusic");
-  if (music.paused) {
-    music.play();
-  } else {
-    music.pause();
-  }
 }
 
 // 🐱 Add moving cat animation at bottom
