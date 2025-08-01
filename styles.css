@@ -7,6 +7,7 @@ body {
   animation: gradientMove 10s ease infinite;
   text-align: center;
   padding: 40px;
+  font-size: 22px; /* increased font size */
 }
 
 @keyframes gradientMove {
@@ -16,11 +17,11 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   background-color: #fffdf5;
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   animation: floaty 4s ease-in-out infinite;
 }
@@ -31,14 +32,14 @@ body {
 }
 
 .title {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   color: #d96fa1;
   margin-bottom: 10px;
   animation: popIn 1s ease;
 }
 
 .subtitle, .mood-text {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: #444;
   margin-bottom: 20px;
   animation: fadeIn 1s ease-in-out;
@@ -55,8 +56,8 @@ body {
 }
 
 select, button {
-  padding: 12px 20px;
-  font-size: 18px;
+  padding: 14px 24px;
+  font-size: 20px;
   border-radius: 12px;
   margin: 10px;
   border: 2px solid #d96fa1;
@@ -83,7 +84,7 @@ button::after {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 24px;
   opacity: 0.6;
   pointer-events: none;
 }
@@ -91,7 +92,7 @@ button::after {
 .back-link {
   color: #d96fa1;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
   margin-top: 20px;
   transition: transform 0.3s ease;
@@ -102,13 +103,12 @@ button::after {
   color: #ff6fa1;
 }
 
-.cat-animation {
-  font-size: 40px;
-  animation: pawBounce 1s infinite alternate;
-  margin-top: 20px;
+.cat-bounce {
+  font-size: 3rem;
+  margin: 20px 0;
+  animation: pawBounce 0.7s infinite alternate ease-in-out;
 }
 
 @keyframes pawBounce {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
+  100% { transform: translateY(-15px); }
