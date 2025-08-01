@@ -1,4 +1,4 @@
-const moods = [
+const moods = [ 
   "I'm so happy I might start purring in Morse code!",
   "Too sleepy to cat. Wake me in nine lives.",
   "I'm hungry enough to eat your laptop charger.",

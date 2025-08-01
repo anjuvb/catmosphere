@@ -11,6 +11,9 @@ function submitMeow() {
     return;
   }
 
-  const moodIndex = Math.floor(Math.random() * 100);
+  // ✅ Fixed: Only generate mood index in the actual range
+  const totalMoods = 52;
+  const moodIndex = Math.floor(Math.random() * totalMoods);
+
   window.location.href = `mood.html?mood=${moodIndex}`;
 }
