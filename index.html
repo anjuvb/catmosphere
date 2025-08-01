@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,9 +6,15 @@
 </head>
 <body>
   <div class="container">
-    <h1>MoodMeow 🐱</h1>
-    <p>Only one command works here: <strong>meow</strong></p>
-    <input type="text" id="userInput" placeholder="Type meow..." />
+    <h1 class="title">MoodMeow 🐱</h1>
+    <p class="subtitle">Choose your meow to know the cat's mood!</p>
+    <select id="userInput">
+      <option value="meow">meow</option>
+      <option value="MEOW">MEOW</option>
+      <option value="MEow">MEow</option>
+      <option value="MeOW">MeOW</option>
+      <option value="MEow">MEow</option>
+    </select>
     <button onclick="submitMeow()">Send</button>
   </div>
 
