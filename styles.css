@@ -159,7 +159,18 @@ button::after {
   transform: scale(1.05) rotate(-1deg);
   color: #b43e7e;
 }
+.nyan-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
 
+.nyan-gif {
+  max-width: 100%;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
 @keyframes pawBounce {
   0% { transform: translateY(0); }
