@@ -17,3 +17,4 @@ function submitMeow() {
 
   window.location.href = `mood.html?mood=${moodIndex}`;
 }
+
