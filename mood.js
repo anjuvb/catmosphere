@@ -1,37 +1,64 @@
-function submitMeow() {
-  const input = document.getElementById("userInput").value.trim().toLowerCase();
-  const responseBox = document.getElementById("response");
+const moods = [
+  "I'm so happy I might start purring in Morse code!",
+  "Too sleepy to cat. Wake me in nine lives.",
+  "I'm hungry enough to eat your laptop charger.",
+  "Milk? Yes. Now.",
+  "Feeling grumpy. Hiss.",
+  "Zoomies activated. Try to catch me!",
+  "Curious mode: 100%.",
+  "This furniture looks destructible.",
+  "GIVE. FISH. NOW.",
+  "I demand cuddles or I riot.",
+  "I'm lonely. Sit with me, peasant.",
+  "Energy = infinite. Catch me if you can!",
+  "I'm majestic. You may look, not touch.",
+  "Too lazy to blink.",
+  "World domination starts after this nap.",
+  "Belly rubs now. Maybe. Or maybe claws.",
+  "Guarding this cardboard box with my life.",
+  "Invisible. You can’t see me. No touch.",
+  "Suspicious. Who touched my treat jar?",
+  "Desk? I knock. You scream. Balance.",
+  "I’m feeling playful! Attack your toes!",
+  "Mischief mood. Blame the dog.",
+  "Just stared at a wall for 1 hour. Zen.",
+  "Yelled at the wall. No regrets.",
+  "I scratched it. It’s mine now.",
+  "Door closed? Crime!",
+  "Tail-chasing championship begins now.",
+  "Caught a bug. Ate it. Survivor.",
+  "No pet. Yes stare.",
+  "Stepping only on laptops today.",
+  "Sleep. Eat. Repeat. Royal routine.",
+  "Window watcher. Bird judge.",
+  "Meow mix opera begins in 3...2...",
+  "Bathtub zoomies at 3 AM.",
+  "I sleep in sink. It’s ergonomic.",
+  "Glaring at the void.",
+  "Wants hugs. Will pretend to hate it.",
+  "Meowing for no reason. Classic move.",
+  "Want to sit where you’re sitting.",
+  "Ignoring you for no reason.",
+  "Mid-air backflip failed. Still majestic.",
+  "Licking myself dramatically.",
+  "Mad because you looked at me wrong.",
+  "Laser pointer trauma flashback.",
+  "Plotting revenge for vet visit.",
+  "Napping in forbidden zone.",
+  "Thinking deeply about string theory.",
+  "Dramatically flopped on floor.",
+  "Chair thief strikes again!",
+  "Sassy. No questions.",
+  "Too fabulous to function.",
+  "Just meowed and ran away. Suspense.",
+  "Doing nothing suspicious at all. Promise."
+];
 
-  if (input !== "meow") {
-    responseBox.innerText = "Only 'meow' is understood here 😾";
-    return;
-  }
+const urlParams = new URLSearchParams(window.location.search);
+const moodIndex = parseInt(urlParams.get("mood"));
 
-  const moods = [
-    "I'm so happy I might start purring in Morse code!",
-    "Too sleepy to cat. Wake me in nine lives.",
-    "I'm hungry enough to eat an entire tuna... or your lunch.",
-    "Meow me milk! In a fancy bowl, please.",
-    "Feeling grumpy. Don't even look at me.",
-    "Zoomies activated. The floor is my racetrack.",
-    "I'm curious... what's inside that forbidden drawer?",
-    "I must destroy this furniture. It has wronged me.",
-    "Fish. Now. Or I scream forever.",
-    "I demand cuddles or I file a formal pawtest.",
-    "I'm lonely. Can you come sit on the floor with me?",
-    "I'm bursting with energy. Let's climb walls!",
-    "I feel majestic. Bow before my floofiness.",
-    "Too lazy to blink. Just vibing.",
-    "I’m plotting world domination. You may pet me first.",
-    "Belly rubs now. But I will bite halfway through.",
-    "I am guarding this territory. No crumbs shall pass.",
-    "I'm in invisible mode. You can't see me. Shhh.",
-    "I'm suspicious... why did you touch the treat jar?",
-    "I will now knock everything off your desk. Because art.",
-    "I'm feeling playful. Where's my favorite toy?",
-    "I’m in a mood for mischief. Watch your step!"
-  ];
-
-  const randomMood = moods[Math.floor(Math.random() * moods.length)];
-  responseBox.innerText = "😺 " + randomMood;
+if (!isNaN(moodIndex) && moodIndex >= 0 && moodIndex < moods.length) {
+  document.getElementById("moodText").innerText = "😺 " + moods[moodIndex];
+} else {
+  document.getElementById("moodText").innerText = "😿 Mood not found!";
 }
