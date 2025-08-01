@@ -60,5 +60,5 @@ const moodIndex = parseInt(urlParams.get("mood"));
 if (!isNaN(moodIndex) && moodIndex >= 0 && moodIndex < moods.length) {
   document.getElementById("moodText").innerText = "😺 " + moods[moodIndex];
 } else {
-  document.getElementById("moodText").innerText = "😿 Mood not found!";
+  document.getElementBerText = "😿 Mood not found!";
 }
