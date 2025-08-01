@@ -3,7 +3,7 @@ async function loadMood() {
   const moodIndex = parseInt(urlParams.get('mood'));
 
   // Replace moods.json with a built-in list
-  const moods = [
+  const moods = 
    [
   "I'm so happy I might start purring in Morse code!",
   "Too sleepy to cat. Wake me in nine lives.",
