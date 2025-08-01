@@ -1,153 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
-
 body {
-  font-family: 'Baloo 2', cursive;
-  background: linear-gradient(270deg, #ffe0f0, #fffbd6, #e0f7fa);
-  background-size: 600% 600%;
-  animation: gradientMove 10s ease infinite;
+  font-family: sans-serif;
   text-align: center;
   padding: 40px;
-  font-size: 22px;
+  background: #fffbe7;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.container {
-  max-width: 700px;
-  margin: auto;
-  background-color: #fffdf5;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  animation: floaty 4s ease-in-out infinite;
-}
-
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.title {
-  font-size: 3.2rem;
-  color: #d96fa1;
-  margin-bottom: 10px;
-  animation: popIn 1s ease;
-}
-
-.subtitle, .mood-text {
-  font-size: 1.6rem;
-  color: #444;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes popIn {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-select, button {
-  padding: 14px 24px;
-  font-size: 20px;
-  border-radius: 12px;
-  margin: 10px;
-  border: 2px solid #d96fa1;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+input {
+  padding: 10px;
+  font-size: 16px;
 }
 
 button {
-  background-color: #ffd6e8;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover {
-  background-color: #ffafd0;
-  transform: scale(1.05);
-}
-
-button::after {
-  content: "🐾";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.back-link {
-  color: #d96fa1;
-  text-decoration: none;
-  font-size: 20px;
-  display: inline-block;
-  margin-top: 20px;
-  transition: transform 0.3s ease;
-}
-
-.back-link:hover {
-  transform: scale(1.1) rotate(-3deg);
-  color: #ff6fa1;
-}
-
-.cat-bounce {
-  font-size: 3rem;
-  margin: 20px 0;
-  animation: pawBounce 0.7s infinite alternate ease-in-out;
-}
-
-@keyframes pawBounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
-}
-
-/* Rainbow Cat Animation */
-.nyan-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-  margin-top: 40px;
-}
-
-.rainbow {
-  position: absolute;
-  font-size: 2rem;
-  animation: rainbowMove 4s linear infinite;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.running-cat {
-  position: absolute;
-  left: 0;
-  font-size: 3rem;
-  animation: catRun 4s linear infinite;
-  z-index: 2;
-}
-
-@keyframes catRun {
-  0% { transform: translateX(-100px); }
-  100% { transform: translateX(100vw); }
-}
-
-@keyframes rainbowMove {
-  0% { transform: translateX(-160px); opacity: 1; }
-  25% { opacity: 0.9; }
-  50% { opacity: 0.7; }
-  75% { opacity: 0.4; }
-  100% { transform: translateX(100vw); opacity: 0.2; }
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 10px;
 }
