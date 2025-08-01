@@ -2,8 +2,7 @@ function submitMeow() {
   const input = document.getElementById("userInput").value.trim().toLowerCase();
   
   const allowed = [
-    "meow", "meowwww", "meewww", "meooooooow", "meowmeow",
-    "meeooow", "mew", "miaow", "nyan", "mrrrow", "prrr"
+    "Meow"
   ];
 
   if (!allowed.includes(input)) {
