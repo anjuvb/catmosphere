@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
 
+/* 🌈 Moving Cat Animation */
+.moving-cat {
+  font-size: 3rem;
+  position: fixed;
+  bottom: 10px;
+  left: -100px;
+  animation: moveCat 12s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes moveCat {
+  0% { left: -100px; }
+  100% { left: 100vw; }
+}
+
 body {
   font-family: 'Baloo 2', cursive;
   background: linear-gradient(270deg, #ffe0f0, #fffbd6, #e0f7fa);
@@ -7,7 +22,7 @@ body {
   animation: gradientMove 10s ease infinite;
   text-align: center;
   padding: 40px;
-  font-size: 22px; /* increased font size */
+  font-size: 22px;
 }
 
 @keyframes gradientMove {
@@ -112,3 +127,4 @@ button::after {
 @keyframes pawBounce {
   0% { transform: translateY(0); }
   100% { transform: translateY(-15px); }
+}
