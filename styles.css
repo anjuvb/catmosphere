@@ -139,6 +139,27 @@ button::after {
   max-width: 850px;
   padding: 60px;
 }
+.meow-again-btn {
+  display: inline-block;
+  font-size: 24px;
+  background-color: #ffd6e8;
+  color: #d94f9a;
+  padding: 14px 30px;
+  margin-top: 30px;
+  border: 2px solid #d96fa1;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.meow-again-btn:hover {
+  background-color: #ffafd0;
+  transform: scale(1.05) rotate(-1deg);
+  color: #b43e7e;
+}
+
 
 @keyframes pawBounce {
   0% { transform: translateY(0); }
