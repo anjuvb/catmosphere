@@ -7,14 +7,23 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="title">CATMOSPHERE 🐱</h1>
+    <h1 class="title">MEOWATMOSPHERE 🐾</h1>
     <p class="subtitle">Choose your meow to know the cat's mood!</p>
-    
+
     <select id="userInput">
-      <option value="Meow">Meow</option>
+      <option value="meow">meow</option>
     </select>
 
-    <button onclick="submitMeow()">Send</button>
+    <button onclick="submitMeow()">Meow Again</button>
+
+    <div class="toggle-buttons">
+      <button onclick="toggleNightMode()">🌙 Night</button>
+      <button onclick="toggleMusic()">🎵 Music</button>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source src="cute-music.mp3" type="audio/mpeg" />
+    </audio>
   </div>
 
   <script src="script.js"></script>
